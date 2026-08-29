@@ -1,5 +1,4 @@
-import {useState} from "react";
-import type {AlphabetMap, CountsMap, SortedLetterMap} from "../types";
+import type {AlphabetMap} from "../types";
 
 export const alphabet: AlphabetMap = {
     'a': { frequency: 5, maxRepeat: 3 },

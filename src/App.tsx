@@ -3,11 +3,10 @@ import {useState} from "react";
 import type {AlphabetMap, CountsMap, SortedLetterMap} from "./types";
 import Boggle from './assets/boggle_logo.webp';
 import {alphabet, rotateAngles} from "./constants";
-import Timer from "./components/Timer.tsx";
 
 function App() {
     const [randomLetters, setRandomLetters] = useState<Array<{letter: string, angle: number}>>([]);
-    const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
+    //const [isGameStarted, setIsGameStarted] = useState<boolean>(false);
 
     function weightedPick(weights: AlphabetMap, counts: CountsMap) {
         const entries = Object.entries(weights).filter(([letter, props]) => (counts[letter] || 0) < props.maxRepeat);
@@ -38,13 +37,13 @@ function App() {
     }
 
     function shake() {
-        setIsGameStarted(true);
+        //setIsGameStarted(true);
         setRandomLetters(getRandomLetters(alphabet, 16));
     };
 
-    function stopGame() {
-        setIsGameStarted(false);
-    };
+    // function stopGame() {
+    //     setIsGameStarted(false);
+    // };
 
   return (
     <>
